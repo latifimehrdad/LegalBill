@@ -1,0 +1,14 @@
+<resources>
+    <string name="FakeVersion">1.0</string>
+    <string name="app_name">فیش حقوقی</string>
+    <string name="NationalCode">کد ملی</string>
+    <string name="AccountNumber">شماره حساب</string>
+    <string name="Application">نرم افزار</string>
+    <string name="Version">نسخه</string>
+    <string name="Login">ورود</string>
+    <string name="Cancel">انصراف</string>
+    <string name="EmptyNationalCode">کد ملی را وارد نمایید</string>
+    <string name="EmptyAccountNumber">شماره حساب را وارد نمایید</string>
+
+    
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='LegalBill'
+include ':app'
