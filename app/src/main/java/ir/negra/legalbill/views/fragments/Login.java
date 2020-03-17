@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.cunoraz.gifview.library.GifView;
 
@@ -29,11 +31,15 @@ import ir.negra.legalbill.viewmodels.fragments.VM_Login;
 
 import static ir.negra.legalbill.utilities.StaticFunctions.TextChangeForChangeBack;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class Login extends Fragment {
 
     private Context context;
     private VM_Login vm_login;
     private View view;
+    private NavController navController;
     private DisposableObserver<String> disposableObserver;
 
     @BindView(R.id.RelativeLayoutLogin)
@@ -47,9 +53,6 @@ public class Login extends Fragment {
 
     @BindView(R.id.ImageViewLogin)
     ImageView ImageViewLogin;
-
-    @BindView(R.id.TextViewLogin)
-    TextView TextViewLogin;
 
     @BindView(R.id.GifViewLogin)
     GifView GifViewLogin;
@@ -89,6 +92,7 @@ public class Login extends Fragment {
     @Override
     public void onStart() {//_______________________________________________________________________ Start onStart
         super.onStart();
+        navController = Navigation.findNavController(view);
         if(disposableObserver != null)
             disposableObserver.dispose();
         disposableObserver = null;
@@ -142,21 +146,23 @@ public class Login extends Fragment {
         boolean national = true;
         boolean account = true;
 
+        if (EditTextAccountNumber.getText().length() == 0) {
+            EditTextAccountNumber.setBackgroundColor(getResources().getColor(R.color.ML_Edit_Empty_back));
+            LinearLayoutAccountNumber.setBackgroundResource(R.drawable.dw_edit_empty_account_number);
+            EditTextAccountNumber.setError(getResources().getString(R.string.EmptyAccountNumber));
+            EditTextAccountNumber.requestFocus();
+            account = false;
+        }
+
         if (EditTextNationalCode.getText().length() == 0) {
             EditTextNationalCode.setBackgroundColor(getResources().getColor(R.color.ML_Edit_Empty_back));
-            LinearLayoutNationalCode.setBackgroundResource(R.drawable.dw_edit_empty_back);
+            LinearLayoutNationalCode.setBackgroundResource(R.drawable.dw_edit_empty_national_code);
             EditTextNationalCode.setError(getResources().getString(R.string.EmptyNationalCode));
             EditTextNationalCode.requestFocus();
             national = false;
         }
 
-        if (EditTextAccountNumber.getText().length() == 0) {
-            EditTextAccountNumber.setBackgroundColor(getResources().getColor(R.color.ML_Edit_Empty_back));
-            LinearLayoutAccountNumber.setBackgroundResource(R.drawable.dw_edit_empty_back);
-            EditTextAccountNumber.setError(getResources().getString(R.string.EmptyAccountNumber));
-            EditTextAccountNumber.requestFocus();
-            account = false;
-        }
+
 
 
 
@@ -171,8 +177,7 @@ public class Login extends Fragment {
 
     private void DismissLoading() {//_______________________________________________________________ Start DismissLoading
         StaticFunctions.isCancel = true;
-        TextViewLogin.setText(getResources().getString(R.string.Login));
-        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_button));
+        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_circle_button));
         GifViewLogin.setVisibility(View.GONE);
         ImageViewLogin.setVisibility(View.VISIBLE);
 
@@ -181,8 +186,7 @@ public class Login extends Fragment {
 
     private void ShowLoading() {//__________________________________________________________________ Start ShowLoading
         StaticFunctions.isCancel = false;
-        TextViewLogin.setText(getResources().getString(R.string.Cancel));
-        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_button_connecting));
+        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_circle_button_connecting));
         GifViewLogin.setVisibility(View.VISIBLE);
         ImageViewLogin.setVisibility(View.INVISIBLE);
     }//_____________________________________________________________________________________________ End ShowLoading
@@ -204,6 +208,7 @@ public class Login extends Fragment {
                                         if(disposableObserver != null)
                                             disposableObserver.dispose();
                                         disposableObserver = null;
+                                        navController.navigate(R.id.action_login_to_home);
                                         break;
                                 }
                             }
@@ -234,7 +239,8 @@ public class Login extends Fragment {
     @Override
     public void onDestroy() {//_____________________________________________________________________ Start onDestroy
         super.onDestroy();
-        disposableObserver.dispose();
+        if(disposableObserver != null)
+            disposableObserver.dispose();
     }//_____________________________________________________________________________________________ End onDestroy
 
 

@@ -2,12 +2,18 @@ package ir.negra.legalbill.views.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
+import androidx.navigation.Navigation;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,6 +25,8 @@ import ir.negra.legalbill.viewmodels.activity.VM_Main;
 public class MainActivity extends AppCompatActivity {
 
     private VM_Main vm_main;
+    private NavController navController;
+    private boolean doubleBackToExitPressedOnce = false;
 
     @BindView(R.id.TextView_Main_Footer)
     TextView TextView_Main_Footer;
@@ -29,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         vm_main = new VM_Main(this);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setMain(vm_main);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         ButterKnife.bind(this);
         SetFooterVersion();
     }//_____________________________________________________________________________________________ End onCreate
@@ -62,5 +71,38 @@ public class MainActivity extends AppCompatActivity {
     public void attachBaseContext(Context newBase) {//______________________________________________ Start attachBaseContext
         super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }//_____________________________________________________________________________________________ End attachBaseContext
+
+
+
+    @Override
+    public void onBackPressed() {//_________________________________________________________________ Start onBackPressed
+
+        NavDestination navDestination = navController.getCurrentDestination();
+        String fragment = navDestination.getLabel().toString();
+        if ((!fragment.equalsIgnoreCase("Home")) &&
+                (!fragment.equalsIgnoreCase("Login"))) {
+            super.onBackPressed();
+            return;
+        }
+
+
+        if (doubleBackToExitPressedOnce) {
+            System.exit(1);
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "برای خروج 2 بار کلیک کنید", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+
+    }//_____________________________________________________________________________________________ End onBackPressed
+
 
 }

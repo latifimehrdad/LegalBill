@@ -23,6 +23,9 @@ import ir.negra.legalbill.R;
 import ir.negra.legalbill.databinding.FragmentSplashBinding;
 import ir.negra.legalbill.viewmodels.fragments.VM_Splash;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
 public class Splash extends Fragment {
 
     private View view;
