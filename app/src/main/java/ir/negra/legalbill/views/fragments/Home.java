@@ -7,7 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+
+import butterknife.ButterKnife;
+import ir.negra.legalbill.R;
+import ir.negra.legalbill.databinding.FragmentHomeBinding;
+import ir.negra.legalbill.viewmodels.fragments.VM_Home;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +21,9 @@ import androidx.fragment.app.Fragment;
 public class Home extends Fragment {
 
     private Context context;
+    private View view;
+    private VM_Home vm_home;
+
 
     public Home() {//_______________________________________________________________________________ Start Home
     }//_____________________________________________________________________________________________ End Home
@@ -25,7 +34,15 @@ public class Home extends Fragment {
             LayoutInflater inflater,
             ViewGroup container,
             Bundle savedInstanceState) {//__________________________________________________________ Start onCreateView
-        return super.onCreateView(inflater, container, savedInstanceState);
+        context = getActivity();
+        vm_home = new VM_Home(context);
+        FragmentHomeBinding binding = DataBindingUtil.inflate(
+                inflater, R.layout.fragment_home,container,false
+        );
+        binding.setHome(vm_home);
+        view = binding.getRoot();
+        ButterKnife.bind(this, view);
+        return view;
     }//_____________________________________________________________________________________________ End onCreateView
 
 

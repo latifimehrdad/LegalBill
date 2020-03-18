@@ -9,6 +9,7 @@
     <string name="Cancel">انصراف</string>
     <string name="EmptyNationalCode">کد ملی را وارد نمایید</string>
     <string name="EmptyAccountNumber">شماره حساب را وارد نمایید</string>
+    <string name="GetLegalBill">دریافت فیش حقوقی</string>
 
     
 </resources>
