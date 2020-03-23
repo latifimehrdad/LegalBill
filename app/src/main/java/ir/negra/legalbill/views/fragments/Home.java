@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.negra.legalbill.R;
 import ir.negra.legalbill.databinding.FragmentHomeBinding;
@@ -23,6 +27,10 @@ public class Home extends Fragment {
     private Context context;
     private View view;
     private VM_Home vm_home;
+    private NavController navController;
+
+    @BindView(R.id.LinearLayoutLegalBill)
+    LinearLayout LinearLayoutLegalBill;
 
 
     public Home() {//_______________________________________________________________________________ Start Home
@@ -49,5 +57,20 @@ public class Home extends Fragment {
     @Override
     public void onStart() {//_______________________________________________________________________ Start onStart
         super.onStart();
+        navController = Navigation.findNavController(view);
+        SetOnclick();
     }//_____________________________________________________________________________________________ End onStart
+
+
+    private void SetOnclick() {//___________________________________________________________________ Start SetOnclick
+
+        LinearLayoutLegalBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_home_to_legalBill);
+            }
+        });
+    }//_____________________________________________________________________________________________ End SetOnclick
+
+
 }

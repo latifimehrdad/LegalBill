@@ -52,7 +52,7 @@
                     <EditText
                         android:id="@+id/EditTextNationalCode"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="@dimen/_20sdp"
                         android:layout_weight="1"
                         android:background="@android:color/white"
@@ -101,7 +101,7 @@
                     <EditText
                         android:id="@+id/EditTextAccountNumber"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="@dimen/_20sdp"
                         android:layout_weight="1"
                         android:background="@android:color/white"
@@ -155,7 +155,6 @@
                     android:layout_height="@dimen/_30sdp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
                     android:visibility="invisible"
                     custom:gif="@drawable/loading" />
 

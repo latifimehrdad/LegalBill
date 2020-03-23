@@ -16,6 +16,7 @@
         android:padding="@dimen/_40sdp">
 
         <LinearLayout
+            android:id="@+id/LinearLayoutLegalBill"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:background="@drawable/dw_button"
