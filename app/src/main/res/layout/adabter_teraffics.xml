@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/_10sdp"
             android:gravity="right"
             android:text="تاریخ : سه شنبه 05 فروردین ماه سال 1399"/>
@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="right"
@@ -57,7 +57,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="right"
@@ -65,6 +65,20 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ML_Light_Gray"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ML_Blue_Dark"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="right"
+            android:text="توضیحات"/>
 
 
     </LinearLayout>

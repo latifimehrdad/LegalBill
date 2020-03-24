@@ -16,6 +16,7 @@
     <string name="ChooseYear">انتخاب سال</string>
     <string name="SearchYear">جستجوی سال</string>
     <string name="TrafficController">تردد ماه گذشته</string>
+    <string name="LeaveRequest">درخواست مرخصی</string>
 
     
 </resources>

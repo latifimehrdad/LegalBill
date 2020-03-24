@@ -61,6 +61,15 @@
             app:popExitAnim="@anim/slide_out_left"
             />
 
+        <action
+            android:id="@+id/action_home_to_leaveRequest"
+            app:destination="@id/leaveRequest"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            />
+
     </fragment>
 
     <fragment
@@ -76,5 +85,11 @@
         android:label="TrafficController"
         tools:layout="@layout/fragment_traffic_controller"
         />
+
+    <fragment
+        android:id="@+id/leaveRequest"
+        android:name="ir.negra.legalbill.views.fragments.LeaveRequest"
+        android:label="LeaveRequest"
+        tools:layout="@layout/fragment_leave_request"/>
 
 </navigation>

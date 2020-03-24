@@ -53,6 +53,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/LinearLayoutLeaveRequest"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/_40sdp"
@@ -66,7 +67,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:src="@drawable/ic_phonelink_setup"
+                    android:src="@drawable/ic_local_cafe"
                     android:tint="@android:color/white"
                     />
 
@@ -78,7 +79,7 @@
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     fontPath="font/iransans_web_medium.ttf"
-                    android:text="@string/Support"/>
+                    android:text="@string/LeaveRequest"/>
 
             </LinearLayout>
 

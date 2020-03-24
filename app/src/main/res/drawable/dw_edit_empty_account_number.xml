@@ -4,6 +4,6 @@
     >
 
     <solid android:color="@color/ML_Edit_Empty_back"/>
-    <corners android:bottomLeftRadius="@dimen/_100sdp"/>
+    <corners android:radius="@dimen/_10sdp"/>
 
 </shape>
