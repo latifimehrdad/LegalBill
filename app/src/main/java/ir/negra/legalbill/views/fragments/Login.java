@@ -63,6 +63,9 @@ public class Login extends Fragment {
     @BindView(R.id.LinearLayoutAccountNumber)
     LinearLayout LinearLayoutAccountNumber;
 
+    @BindView(R.id.TextViewLogin)
+    TextView TextViewLogin;
+
 
     public Login() {//______________________________________________________________________________ Start Login
     }//_____________________________________________________________________________________________ End Login
@@ -177,7 +180,8 @@ public class Login extends Fragment {
 
     private void DismissLoading() {//_______________________________________________________________ Start DismissLoading
         StaticFunctions.isCancel = true;
-        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_circle_button));
+        TextViewLogin.setText(getResources().getString(R.string.Login));
+        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_login_button));
         GifViewLogin.setVisibility(View.GONE);
         ImageViewLogin.setVisibility(View.VISIBLE);
 
@@ -186,6 +190,7 @@ public class Login extends Fragment {
 
     private void ShowLoading() {//__________________________________________________________________ Start ShowLoading
         StaticFunctions.isCancel = false;
+        TextViewLogin.setText(getResources().getString(R.string.Cancel));
         RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_circle_button_connecting));
         GifViewLogin.setVisibility(View.VISIBLE);
         ImageViewLogin.setVisibility(View.INVISIBLE);

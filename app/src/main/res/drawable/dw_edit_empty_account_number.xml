@@ -4,6 +4,7 @@
     >
 
     <solid android:color="@color/ML_Edit_Empty_back"/>
-    <corners android:radius="@dimen/_10sdp"/>
+    <stroke android:width="@dimen/_2sdp" android:color="@android:color/white"/>
+    <corners android:radius="@dimen/_50sdp"/>
 
 </shape>

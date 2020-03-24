@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/dw_back_login"
         android:padding="@dimen/_40sdp">
 
         <LinearLayout

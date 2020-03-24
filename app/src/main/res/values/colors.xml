@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ed1c24</color>
-    <color name="colorPrimaryDark">#A30C12</color>
+    <color name="colorPrimary">#0088FF</color>
+    <color name="colorPrimaryDark">#0257A1</color>
     <color name="colorAccent">#03DAC5</color>
 
 
+    <color name="ML_Red">#ed1c24</color>
     <color name="ML_Light_Gray">#A5A4A4</color>
-    <color name="ML_Edit_Empty_back">#F8BFC2</color>
+    <color name="ML_Gray">#807F7F</color>
+    <color name="ML_Edit_Empty_back">#FBCDD0</color>
     <color name="ML_Blue">#0088FF</color>
     <color name="ML_Blue_Dark">#0257A1</color>
+
+    <color name="ML_Gradient_Start">#FFDBB1</color>
+    <color name="ML_Gradient_End">#79BAFF</color>
 
 </resources>
