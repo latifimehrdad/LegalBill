@@ -83,6 +83,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/LinearLayoutTrafficController"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/_40sdp"
@@ -95,7 +96,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:src="@drawable/ic_receipt"
+                    android:src="@drawable/ic_fingerprin"
                     android:tint="@android:color/white"
                     />
 
@@ -107,7 +108,7 @@
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     fontPath="font/iransans_web_medium.ttf"
-                    android:text="@string/GetLegalBill"/>
+                    android:text="@string/TrafficController"/>
 
             </LinearLayout>
 

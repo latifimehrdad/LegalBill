@@ -32,6 +32,9 @@ public class Home extends Fragment {
     @BindView(R.id.LinearLayoutLegalBill)
     LinearLayout LinearLayoutLegalBill;
 
+    @BindView(R.id.LinearLayoutTrafficController)
+    LinearLayout LinearLayoutTrafficController;
+
 
     public Home() {//_______________________________________________________________________________ Start Home
     }//_____________________________________________________________________________________________ End Home
@@ -70,6 +73,14 @@ public class Home extends Fragment {
                 navController.navigate(R.id.action_home_to_legalBill);
             }
         });
+
+        LinearLayoutTrafficController.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_home_to_trafficController);
+            }
+        });
+
     }//_____________________________________________________________________________________________ End SetOnclick
 
 

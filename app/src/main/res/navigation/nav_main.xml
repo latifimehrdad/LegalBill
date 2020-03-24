@@ -52,6 +52,15 @@
             app:popExitAnim="@anim/slide_out_left"
             />
 
+        <action
+            android:id="@+id/action_home_to_trafficController"
+            app:destination="@id/trafficController"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            />
+
     </fragment>
 
     <fragment
@@ -59,6 +68,13 @@
         android:name="ir.negra.legalbill.views.fragments.LegalBill"
         android:label="LegalBill"
         tools:layout="@layout/fragment_legall_bill"
+        />
+
+    <fragment
+        android:id="@+id/trafficController"
+        android:name="ir.negra.legalbill.views.fragments.TrafficController"
+        android:label="TrafficController"
+        tools:layout="@layout/fragment_traffic_controller"
         />
 
 </navigation>

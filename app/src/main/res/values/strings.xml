@@ -15,6 +15,7 @@
     <string name="SearchMonth">جستجوی ماه</string>
     <string name="ChooseYear">انتخاب سال</string>
     <string name="SearchYear">جستجوی سال</string>
+    <string name="TrafficController">تردد ماه گذشته</string>
 
     
 </resources>

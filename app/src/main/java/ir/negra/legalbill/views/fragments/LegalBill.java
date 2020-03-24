@@ -11,12 +11,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.negra.legalbill.R;
 import ir.negra.legalbill.databinding.FragmentLegallBillBinding;
 import ir.negra.legalbill.models.ModelSpinnerItem;
+import ir.negra.legalbill.utilities.ApplicationUtility;
 import ir.negra.legalbill.viewmodels.fragments.VM_LegalBill;
 import ir.negra.legalbill.views.dialogs.searchspinner.MLSpinnerDialog;
 import ir.negra.legalbill.views.dialogs.searchspinner.OnSpinnerItemClick;
@@ -42,7 +44,6 @@ public class LegalBill extends Fragment {
 
     @BindView(R.id.TextViewYear)
     TextView TextViewYear;
-
 
 
     public LegalBill() {//__________________________________________________________________________ Start LegalBill
@@ -76,32 +77,32 @@ public class LegalBill extends Fragment {
 
     private void SetYearAndMonthItems() {//_________________________________________________________ Start SetYearAndMonthItems
         MonthList = new ArrayList<>();
-        MonthList.add(new ModelSpinnerItem("1","فروردین"));
-        MonthList.add(new ModelSpinnerItem("2","اردیبهشت"));
-        MonthList.add(new ModelSpinnerItem("3","خرداد"));
-        MonthList.add(new ModelSpinnerItem("4","تیر"));
-        MonthList.add(new ModelSpinnerItem("5","مرداد"));
-        MonthList.add(new ModelSpinnerItem("6","شهریور"));
-        MonthList.add(new ModelSpinnerItem("7","مهر"));
-        MonthList.add(new ModelSpinnerItem("8","آبان"));
-        MonthList.add(new ModelSpinnerItem("9","آذر"));
-        MonthList.add(new ModelSpinnerItem("10","دی"));
-        MonthList.add(new ModelSpinnerItem("11","بهمن"));
-        MonthList.add(new ModelSpinnerItem("12","اسفند"));
+        MonthList.add(new ModelSpinnerItem("1", "فروردین"));
+        MonthList.add(new ModelSpinnerItem("2", "اردیبهشت"));
+        MonthList.add(new ModelSpinnerItem("3", "خرداد"));
+        MonthList.add(new ModelSpinnerItem("4", "تیر"));
+        MonthList.add(new ModelSpinnerItem("5", "مرداد"));
+        MonthList.add(new ModelSpinnerItem("6", "شهریور"));
+        MonthList.add(new ModelSpinnerItem("7", "مهر"));
+        MonthList.add(new ModelSpinnerItem("8", "آبان"));
+        MonthList.add(new ModelSpinnerItem("9", "آذر"));
+        MonthList.add(new ModelSpinnerItem("10", "دی"));
+        MonthList.add(new ModelSpinnerItem("11", "بهمن"));
+        MonthList.add(new ModelSpinnerItem("12", "اسفند"));
         TextViewMonth.setText(getResources().getString(R.string.ChooseMonth));
 
+        ApplicationUtility utility = new ApplicationUtility();
+        String y = utility.MiladiToJalali(new Date(), "YearJalaliNumber");
+        int year = 1399;
+        try {
+            year = Integer.valueOf(y);
+        } catch (Exception e) {
+        }
         YearList = new ArrayList<>();
-        YearList.add(new ModelSpinnerItem("1389","1389"));
-        YearList.add(new ModelSpinnerItem("1390","1390"));
-        YearList.add(new ModelSpinnerItem("1391","1391"));
-        YearList.add(new ModelSpinnerItem("1392","1392"));
-        YearList.add(new ModelSpinnerItem("1393","1393"));
-        YearList.add(new ModelSpinnerItem("1394","1394"));
-        YearList.add(new ModelSpinnerItem("1395","1395"));
-        YearList.add(new ModelSpinnerItem("1396","1396"));
-        YearList.add(new ModelSpinnerItem("1397","1397"));
-        YearList.add(new ModelSpinnerItem("1398","1398"));
-        YearList.add(new ModelSpinnerItem("1399","1399"));
+
+        for(int i = year ; i > year - 10 ; i--) {
+            YearList.add(new ModelSpinnerItem(String.valueOf(i), String.valueOf(i)));
+        }
         TextViewYear.setText(getResources().getString(R.string.ChooseYear));
 
 
@@ -129,7 +130,6 @@ public class LegalBill extends Fragment {
     }//_____________________________________________________________________________________________ End SetOnclick
 
 
-
     private void SetItemYear() {//__________________________________________________________________ Start SetItemYear
         TextViewYear.setText(getResources().getString(R.string.ChooseYear));
         YearId = "-1";
@@ -154,8 +154,6 @@ public class LegalBill extends Fragment {
         if (ClickYear)
             spinnerYear.showSpinerDialog();
     }//_____________________________________________________________________________________________ End SetItemYear
-
-
 
 
     private void SetItemMonth() {//_________________________________________________________________ Start SetItemMonth
