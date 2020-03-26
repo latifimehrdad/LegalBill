@@ -17,6 +17,14 @@
     <string name="SearchYear">جستجوی سال</string>
     <string name="TrafficController">تردد ماه گذشته</string>
     <string name="LeaveRequest">درخواست مرخصی</string>
+    <string name="DateFrom">از تاریخ</string>
+    <string name="DateTo">تا تاریخ</string>
+    <string name="Time">ساعت</string>
+    <string name="Day">روز</string>
+    <string name="HowMuch">به میزان</string>
+    <string name="Save">ثبت</string>
+    <string name="Choose">انتخاب</string>
+    <string name="Today">امروز</string>
 
     
 </resources>
