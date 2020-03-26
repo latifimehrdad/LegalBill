@@ -151,7 +151,7 @@ public class Login extends Fragment {
 
         if (EditTextAccountNumber.getText().length() == 0) {
             EditTextAccountNumber.setBackgroundColor(getResources().getColor(R.color.ML_Edit_Empty_back));
-            LinearLayoutAccountNumber.setBackgroundResource(R.drawable.dw_edit_empty_account_number);
+            LinearLayoutAccountNumber.setBackgroundResource(R.drawable.dw_edit_empty_back);
             EditTextAccountNumber.setError(getResources().getString(R.string.EmptyAccountNumber));
             EditTextAccountNumber.requestFocus();
             account = false;
@@ -159,7 +159,7 @@ public class Login extends Fragment {
 
         if (EditTextNationalCode.getText().length() == 0) {
             EditTextNationalCode.setBackgroundColor(getResources().getColor(R.color.ML_Edit_Empty_back));
-            LinearLayoutNationalCode.setBackgroundResource(R.drawable.dw_edit_empty_national_code);
+            LinearLayoutNationalCode.setBackgroundResource(R.drawable.dw_edit_empty_back);
             EditTextNationalCode.setError(getResources().getString(R.string.EmptyNationalCode));
             EditTextNationalCode.requestFocus();
             national = false;
@@ -181,7 +181,7 @@ public class Login extends Fragment {
     private void DismissLoading() {//_______________________________________________________________ Start DismissLoading
         StaticFunctions.isCancel = true;
         TextViewLogin.setText(getResources().getString(R.string.Login));
-        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_login_button));
+        RelativeLayoutLogin.setBackground(getResources().getDrawable(R.drawable.dw_button));
         GifViewLogin.setVisibility(View.GONE);
         ImageViewLogin.setVisibility(View.VISIBLE);
 

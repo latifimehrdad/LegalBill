@@ -1,6 +1,7 @@
 <resources>
     <string name="FakeVersion">1.0</string>
     <string name="app_name">فیش حقوقی</string>
+    <string name="EnterInformation">لطفا اطلاعات خود را وارد کنید.</string>
     <string name="NationalCode">کد ملی</string>
     <string name="AccountNumber">شماره حساب</string>
     <string name="Application">نرم افزار</string>

@@ -54,10 +54,7 @@ public class StaticFunctions {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(layout.getId() == R.id.LinearLayoutNationalCode)
-                    layout.setBackgroundResource(R.drawable.dw_edit_national_code);
-                else if(layout.getId() == R.id.LinearLayoutAccountNumber)
-                    layout.setBackgroundResource(R.drawable.dw_edit_account_number);
+                layout.setBackgroundResource(R.drawable.dw_edit_back);
                 editText.setBackgroundResource(android.R.color.white);
             }
 
