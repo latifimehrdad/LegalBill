@@ -15,25 +15,32 @@
         >
 
         <RelativeLayout
+            android:id="@+id/RelativeLayoutHeader"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="@drawable/dw_header"
+            android:padding="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
             >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
-                android:background="@color/colorPrimary"/>
+            <ImageView
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/icon_menu_bar"
+                android:layout_alignParentLeft="true"
+                />
 
             <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_alignParentBottom="true"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_20sdp"
                 android:padding="@dimen/_3sdp"
-                android:background="@drawable/icon_menu"
+                android:src="@drawable/ic_menu"
+                android:tint="@color/ML_White"
                 />
+
 
         </RelativeLayout>
 
@@ -49,11 +56,13 @@
             app:navGraph="@navigation/nav_main" />
 
         <LinearLayout
+            android:id="@+id/LinearLayoutFooter"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/dw_footer"
             android:gravity="center"
-            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
             >
 
             <TextView

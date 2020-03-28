@@ -1,7 +1,9 @@
 package ir.negra.legalbill.views.fragments;
 
 import android.content.Context;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,9 @@ public class Home extends Fragment {
     private View view;
     private VM_Home vm_home;
     private NavController navController;
+
+    @BindView(R.id.LinearLayoutHome)
+    LinearLayout LinearLayoutHome;
 
     @BindView(R.id.LinearLayoutLegalBill)
     LinearLayout LinearLayoutLegalBill;
@@ -64,7 +69,27 @@ public class Home extends Fragment {
         super.onStart();
         navController = Navigation.findNavController(view);
         SetOnclick();
+        SetLayout();
     }//_____________________________________________________________________________________________ End onStart
+
+
+    private void SetLayout() {//____________________________________________________________________ Start SetLayout
+        Display display = getActivity().getWindowManager(). getDefaultDisplay();
+        Point size = new Point();
+        display. getSize(size);
+        int width = size.x;
+        int d = width * 8 / 100;
+        width = width - (d * 2);
+//        width = width * 80 / 100;
+
+
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) LinearLayoutHome.getLayoutParams();
+        params.height = width;
+        params.width = width;
+        LinearLayoutHome.setLayoutParams(params);
+
+
+    }//_____________________________________________________________________________________________ End SetLayout
 
 
     private void SetOnclick() {//___________________________________________________________________ Start SetOnclick

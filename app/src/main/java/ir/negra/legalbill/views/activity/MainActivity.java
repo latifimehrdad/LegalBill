@@ -1,5 +1,7 @@
 package ir.negra.legalbill.views.activity;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.navigation.NavController;
@@ -12,6 +14,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.TextView_Main_Footer)
     TextView TextView_Main_Footer;
 
+    @BindView(R.id.RelativeLayoutHeader)
+    RelativeLayout RelativeLayoutHeader;
+
+    @BindView(R.id.LinearLayoutFooter)
+    LinearLayout LinearLayoutFooter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {//__________________________________________ Start onCreate
         super.onCreate(savedInstanceState);
@@ -40,6 +50,31 @@ public class MainActivity extends AppCompatActivity {
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         ButterKnife.bind(this);
         SetFooterVersion();
+        SetListener();
+    }//_____________________________________________________________________________________________ End onCreate
+
+
+
+    private void SetListener() {//__________________________________________________________________ Start onCreate
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(
+                    @NonNull NavController controller,
+                    @NonNull NavDestination destination,
+                    @Nullable Bundle arguments) {
+
+                String fragment = destination.getLabel().toString();
+                if ((!fragment.equalsIgnoreCase("Splash")) &&
+                        (!fragment.equalsIgnoreCase("Login"))) {
+                    RelativeLayoutHeader.setVisibility(View.VISIBLE);
+                    LinearLayoutFooter.setVisibility(View.VISIBLE);
+                } else {
+                    RelativeLayoutHeader.setVisibility(View.GONE);
+                    LinearLayoutFooter.setVisibility(View.GONE);
+                }
+
+            }
+        });
     }//_____________________________________________________________________________________________ End onCreate
 
 

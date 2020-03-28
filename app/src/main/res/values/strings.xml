@@ -15,7 +15,7 @@
     <string name="SearchMonth">جستجوی ماه</string>
     <string name="ChooseYear">انتخاب سال</string>
     <string name="SearchYear">جستجوی سال</string>
-    <string name="TrafficController">تردد ماه گذشته</string>
+    <string name="TrafficController">مشاهده تردد</string>
     <string name="LeaveRequest">درخواست مرخصی</string>
     <string name="DateFrom">از تاریخ</string>
     <string name="DateTo">تا تاریخ</string>
@@ -25,6 +25,7 @@
     <string name="Save">ثبت</string>
     <string name="Choose">انتخاب</string>
     <string name="Today">امروز</string>
+    <string name="ViewContract">مشاهده قرارداد</string>
 
     
 </resources>
