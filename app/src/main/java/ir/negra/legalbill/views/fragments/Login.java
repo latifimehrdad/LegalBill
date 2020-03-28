@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -41,6 +42,9 @@ public class Login extends Fragment {
     private View view;
     private NavController navController;
     private DisposableObserver<String> disposableObserver;
+
+    @BindView(R.id.RelativeLayoutGeneral)
+    RelativeLayout RelativeLayoutGeneral;
 
     @BindView(R.id.RelativeLayoutLogin)
     RelativeLayout RelativeLayoutLogin;
@@ -107,6 +111,14 @@ public class Login extends Fragment {
 
 
     private void SetClick() {//_____________________________________________________________________ Start SetClick
+
+        RelativeLayoutGeneral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+        });
 
         RelativeLayoutLogin.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/Home" />
+
+        <item
+            android:id="@+id/legalBill"
+            android:icon="@drawable/ic_receipt"
+            android:title="@string/GetLegalBill" />
+
+        <item
+            android:id="@+id/trafficController"
+            android:icon="@drawable/ic_fingerprint"
+            android:title="@string/TrafficController"
+            />
+
+        <item
+            android:id="@+id/leaveRequest"
+            android:icon="@drawable/ic_local_cafe"
+            android:title="@string/LeaveRequest"/>
+
+        <item
+            android:id="@+id/ViewContract"
+            android:icon="@drawable/icon_view_contract"
+            android:title="@string/ViewContract"/>
+
+
+
+    </group>
+</menu>

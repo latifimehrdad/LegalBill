@@ -1,6 +1,6 @@
 <resources>
     <string name="FakeVersion">1.0</string>
-    <string name="app_name">فیش حقوقی</string>
+    <string name="app_name">پرتال پرسنلی کوشا</string>
     <string name="EnterInformation">لطفا اطلاعات خود را وارد کنید.</string>
     <string name="NationalCode">کد ملی</string>
     <string name="AccountNumber">شماره حساب</string>
@@ -27,6 +27,9 @@
     <string name="Today">امروز</string>
     <string name="ViewContract">مشاهده قرارداد</string>
     <string name="NewLeaveRequest">درخواست مرخصی جدید</string>
+    <string name="Get">دریافت</string>
+    <string name="SignOut">خروج از اکانت</string>
+    <string name="Home">صفحه اصلی</string>
 
     
 </resources>

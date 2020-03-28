@@ -10,13 +10,14 @@
             type="ir.negra.legalbill.viewmodels.fragments.VM_Login" />
     </data>
 
+
     <RelativeLayout
+        android:id="@+id/RelativeLayoutGeneral"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/ML_LoginBack"
         android:gravity="center"
-        android:orientation="vertical"
-        tools:ignore="ExtraText">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="@dimen/_90sdp"
@@ -43,10 +44,10 @@
 
 
                 <TextView
+                    fontPath="font/iransans_web_medium.ttf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    fontPath="font/iransans_web_medium.ttf"
                     android:text="@string/EnterInformation"
                     android:textColor="@color/ML_LoginBack"
                     android:textSize="@dimen/_10sdp" />
@@ -142,10 +143,10 @@
             <RelativeLayout
                 android:id="@+id/RelativeLayoutLogin"
                 android:layout_width="wrap_content"
-                android:layout_below="@id/LinearLayoutLogin"
                 android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_below="@id/LinearLayoutLogin"
                 android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/dw_button">
 
                 <ImageView
@@ -187,8 +188,7 @@
         </RelativeLayout>
 
 
-
-
     </RelativeLayout>
+
 
 </layout>
