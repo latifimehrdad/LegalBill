@@ -1,271 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="leave"
             type="ir.negra.legalbill.viewmodels.fragments.VM_LeaveRequest" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:background="@drawable/dw_back_login"
-        >
-
-        //___________________________ Start LinearLayoutDateFrom
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/LinearLayoutDateFrom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/dw_edit_back"
-            android:gravity="center"
-            android:layout_marginLeft="@dimen/_50sdp"
-            android:layout_marginRight="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:orientation="horizontal"
-            android:padding="@dimen/_5sdp">
-
-            <TextView
-                android:id="@+id/TextViewDateFrom"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:gravity="center"
-                android:hint="@string/DateFrom"
-                android:inputType="number"
-                android:textColor="@color/ML_Gray"
-                android:textSize="@dimen/_12sdp" />
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_3sdp"
-                android:background="@color/ML_Light_Gray" />
-
-            <ImageView
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:tint="@color/ML_Red"
-                android:src="@drawable/ic_event" />
-
-
-        </LinearLayout>
-        //___________________________ End LinearLayoutDateFrom
-
-
-
-        //___________________________ Start LinearLayoutDateTo
-
-        <LinearLayout
-            android:id="@+id/LinearLayoutDateTo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/dw_edit_back"
-            android:gravity="center"
-            android:layout_marginLeft="@dimen/_50sdp"
-            android:layout_marginRight="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:orientation="horizontal"
-            android:padding="@dimen/_5sdp">
-
-            <TextView
-                android:id="@+id/TextViewDateTo"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:gravity="center"
-                android:hint="@string/DateTo"
-                android:inputType="number"
-                android:textColor="@color/ML_Gray"
-                android:textSize="@dimen/_12sdp" />
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_3sdp"
-                android:background="@color/ML_Light_Gray" />
-
-            <ImageView
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:tint="@color/ML_Red"
-                android:src="@drawable/ic_event_available" />
-
-
-        </LinearLayout>
-        //___________________________ End LinearLayoutDateTo
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_50sdp"
-            android:layout_marginRight="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_11sdp"
-            android:gravity="center"
-            android:text="@string/HowMuch"
-            android:textColor="@color/ML_Blue_Dark"
-            fontPath="font/iransans_web_medium.ttf"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_3sdp"
-            android:layout_marginLeft="@dimen/_50sdp"
-            android:layout_marginRight="@dimen/_50sdp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
-
-            //___________________________ Start Day
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dw_edit_back"
-                android:gravity="center"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:orientation="horizontal"
-                android:padding="@dimen/_5sdp">
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:background="@android:color/white"
-                    android:gravity="center"
-                    android:hint="@string/Day"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:textColor="@color/ML_Gray"
-                    android:textSize="@dimen/_12sdp" />
-
-                <LinearLayout
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_3sdp"
-                    android:background="@color/ML_Light_Gray" />
-
-                <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    android:tint="@color/ML_Red"
-                    android:src="@drawable/ic_date_range" />
-
-
-            </LinearLayout>
-            //___________________________ End Day
-
-
-            //___________________________ Start Time
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@drawable/dw_edit_back"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="@dimen/_5sdp">
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:background="@android:color/white"
-                    android:gravity="center"
-                    android:hint="@string/Time"
-                    android:maxLength="2"
-                    android:inputType="number"
-                    android:textColor="@color/ML_Gray"
-                    android:textSize="@dimen/_12sdp" />
-
-                <LinearLayout
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/_3sdp"
-                    android:background="@color/ML_Light_Gray" />
-
-                <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    android:tint="@color/ML_Red"
-                    android:src="@drawable/ic_access_time" />
-
-
-            </LinearLayout>
-            //___________________________ End Time
-
-
-
-        </LinearLayout>
-
-
-        <RelativeLayout
-            android:id="@+id/RelativeLayoutLogin"
+            android:id="@+id/LinearLayoutLeaveNew"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/dw_button">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/dw_button"
+            android:gravity="center">
 
             <ImageView
-                android:id="@+id/ImageViewLogin"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
                 android:src="@drawable/ic_arrow_back"
                 android:tint="@android:color/white" />
 
 
             <TextView
-                android:id="@+id/TextViewLogin"
-                android:layout_width="@dimen/_150sdp"
+                fontPath="font/iransans_web_medium.ttf"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:text="@string/Save"
                 android:gravity="center"
-                fontPath="font/iransans_web_medium.ttf"
+                android:minWidth="@dimen/_130sdp"
+                android:text="@string/NewLeaveRequest"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_11sdp" />
 
-            <com.cunoraz.gifview.library.GifView
-                android:id="@+id/GifViewLogin"
-                android:layout_width="@dimen/_25sdp"
-                android:layout_height="@dimen/_25sdp"
-                android:layout_alignParentLeft="true"
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewLeave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/LinearLayoutLeaveNew"
+            android:padding="@dimen/_10sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/_5sdp"
-                android:visibility="invisible"
-                custom:gif="@drawable/loading" />
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:background="@color/ML_LoginBackTrans"
+                android:orientation="vertical">
 
-        </RelativeLayout>
+                //___________________________ Start LinearLayoutDateFrom
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutDateFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:background="@drawable/dw_edit_back"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/TextViewDateFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:hint="@string/DateFrom"
+                        android:inputType="number"
+                        android:textColor="@color/ML_Gray"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:background="@color/ML_Light_Gray" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:src="@drawable/ic_event"
+                        android:tint="@color/ML_Red" />
+
+
+                </LinearLayout>
+                //___________________________ End LinearLayoutDateFrom
+
+
+                //___________________________ Start LinearLayoutDateTo
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutDateTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:background="@drawable/dw_edit_back"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/TextViewDateTo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:hint="@string/DateTo"
+                        android:inputType="number"
+                        android:textColor="@color/ML_Gray"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:background="@color/ML_Light_Gray" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:src="@drawable/ic_event_available"
+                        android:tint="@color/ML_Red" />
+
+
+                </LinearLayout>
+                //___________________________ End LinearLayoutDateTo
+
+
+                <TextView
+                    fontPath="font/iransans_web_medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_50sdp"
+                    android:gravity="center"
+                    android:text="@string/HowMuch"
+                    android:textColor="@color/ML_White"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    //___________________________ Start Day
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dw_edit_back"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="@string/Day"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/ML_Gray"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:background="@color/ML_Light_Gray" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_date_range"
+                            android:tint="@color/ML_Red" />
+
+
+                    </LinearLayout>
+                    //___________________________ End Day
+
+
+                    //___________________________ Start Time
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/dw_edit_back"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:gravity="center"
+                            android:hint="@string/Time"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="@color/ML_Gray"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:background="@color/ML_Light_Gray" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:src="@drawable/ic_access_time"
+                            android:tint="@color/ML_Red" />
+
+
+                    </LinearLayout>
+                    //___________________________ End Time
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/dw_button_blue">
+
+                    <ImageView
+                        android:id="@+id/ImageViewSave"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/ic_check"
+                        android:tint="@android:color/white" />
+
+
+                    <TextView
+                        android:id="@+id/TextViewSave"
+                        fontPath="font/iransans_web_medium.ttf"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/Save"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.cunoraz.gifview.library.GifView
+                        android:id="@+id/GifViewSave"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:visibility="invisible"
+                        custom:gif="@drawable/loading" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayoutCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/dw_button">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/ic_close"
+                        android:tint="@android:color/white" />
+
+
+                    <TextView
+                        fontPath="font/iransans_web_medium.ttf"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/Cancel"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_11sdp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </layout>

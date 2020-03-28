@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Calendar;
 
@@ -24,6 +27,7 @@ import ir.negra.legalbill.R;
 import ir.negra.legalbill.databinding.FragmentLeaveRequestBinding;
 import ir.negra.legalbill.utilities.ApplicationUtility;
 import ir.negra.legalbill.viewmodels.fragments.VM_LeaveRequest;
+import ir.negra.legalbill.views.adabters.AB_LeaveRequest;
 
 public class LeaveRequest extends Fragment {
 
@@ -31,6 +35,7 @@ public class LeaveRequest extends Fragment {
     private View view;
     private VM_LeaveRequest vm_leaveRequest;
     private NavController navController;
+    private AB_LeaveRequest ab_leaveRequest;
 
     @BindView(R.id.LinearLayoutDateFrom)
     LinearLayout LinearLayoutDateFrom;
@@ -43,6 +48,15 @@ public class LeaveRequest extends Fragment {
 
     @BindView(R.id.TextViewDateTo)
     TextView TextViewDateTo;
+
+    @BindView(R.id.RecyclerViewLeave)
+    RecyclerView RecyclerViewLeave;
+
+    @BindView(R.id.LinearLayoutLeaveNew)
+    LinearLayout LinearLayoutLeaveNew;
+
+    @BindView(R.id.LinearLayoutDialog)
+    LinearLayout LinearLayoutDialog;
 
 
 
@@ -74,10 +88,28 @@ public class LeaveRequest extends Fragment {
         SetOnClick();
         TextViewDateFrom.setText(context.getResources().getString(R.string.DateFrom));
         TextViewDateTo.setText(context.getResources().getString(R.string.DateTo));
+        ab_leaveRequest = new AB_LeaveRequest();
+        RecyclerViewLeave.setLayoutManager(new LinearLayoutManager(context, RecyclerView.VERTICAL,false));
+        RecyclerViewLeave.setAdapter(ab_leaveRequest);
+        LinearLayoutDialog.setVisibility(View.GONE);
     }//_____________________________________________________________________________________________ End onStart
 
 
     private void SetOnClick() {//___________________________________________________________________ Start SetOnClick
+
+        LinearLayoutLeaveNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayoutDialog.setVisibility(View.VISIBLE);
+            }
+        });
+
+        LinearLayoutDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinearLayoutDialog.setVisibility(View.GONE);
+            }
+        });
 
         LinearLayoutDateFrom.setOnClickListener(new View.OnClickListener() {
             @Override

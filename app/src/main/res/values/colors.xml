@@ -5,6 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="ML_LoginBack">#353535</color>
+    <color name="ML_LoginBackTrans">#F2353535</color>
 
     <color name="ML_Red">#ed1c24</color>
     <color name="ML_Light_Gray">#A5A4A4</color>

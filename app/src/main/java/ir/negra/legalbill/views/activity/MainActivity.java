@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.TextView_Main_Footer)
     TextView TextView_Main_Footer;
 
+    @BindView(R.id.LinearLayoutMain)
+    LinearLayout LinearLayoutMain;
+
     @BindView(R.id.RelativeLayoutHeader)
     RelativeLayout RelativeLayoutHeader;
 
@@ -68,9 +71,11 @@ public class MainActivity extends AppCompatActivity {
                         (!fragment.equalsIgnoreCase("Login"))) {
                     RelativeLayoutHeader.setVisibility(View.VISIBLE);
                     LinearLayoutFooter.setVisibility(View.VISIBLE);
+                    LinearLayoutMain.setBackgroundResource(R.color.ML_White);
                 } else {
-                    RelativeLayoutHeader.setVisibility(View.GONE);
-                    LinearLayoutFooter.setVisibility(View.GONE);
+                    RelativeLayoutHeader.setVisibility(View.INVISIBLE);
+                    LinearLayoutFooter.setVisibility(View.INVISIBLE);
+                    LinearLayoutMain.setBackgroundResource(R.color.ML_LoginBack);
                 }
 
             }

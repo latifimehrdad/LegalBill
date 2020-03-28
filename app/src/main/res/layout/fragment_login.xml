@@ -22,15 +22,13 @@
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_130sdp"
             android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_20sdp"
             android:src="@drawable/icon_login_logo" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/_30sdp"
-            android:layout_marginTop="@dimen/_70sdp"
-            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_40sdp"
             android:background="@drawable/icon_login_recangel"
             android:paddingRight="@dimen/_25sdp">
 
@@ -63,7 +61,7 @@
                     android:background="@drawable/dw_edit_back"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="@dimen/_5sdp">
+                    android:padding="@dimen/_7sdp">
 
                     <EditText
                         android:id="@+id/EditTextNationalCode"
@@ -106,7 +104,7 @@
                     android:background="@drawable/dw_edit_back"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="@dimen/_5sdp">
+                    android:padding="@dimen/_7sdp">
 
                     <EditText
                         android:id="@+id/EditTextAccountNumber"
