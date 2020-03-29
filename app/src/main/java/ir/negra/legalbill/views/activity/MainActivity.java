@@ -58,12 +58,25 @@ public class MainActivity extends AppCompatActivity implements
 
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawer;
-
-    @BindView(R.id.nvView)
-    NavigationView nvView;
+//
+//    @BindView(R.id.nvView)
+//    NavigationView nvView;
 
     @BindView(R.id.ImageViewMenu)
     ImageView ImageViewMenu;
+
+    @BindView(R.id.LinearLayoutMenuHome)
+    LinearLayout LinearLayoutMenuHome;
+
+    @BindView(R.id.LinearLayoutMenuLegal)
+    LinearLayout LinearLayoutMenuLegal;
+
+    @BindView(R.id.LinearLayoutMenuTraffic)
+    LinearLayout LinearLayoutMenuTraffic;
+
+    @BindView(R.id.LinearLayoutLeave)
+    LinearLayout LinearLayoutLeave;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {//__________________________________________ Start onCreate
@@ -85,8 +98,8 @@ public class MainActivity extends AppCompatActivity implements
                 new AppBarConfiguration.Builder(navController.getGraph())
                         .setDrawerLayout(mDrawer)
                         .build();
-        NavigationUI.setupWithNavController(nvView, navController);
-        nvView.setNavigationItemSelectedListener(this);
+//        NavigationUI.setupWithNavController(nvView, navController);
+//        nvView.setNavigationItemSelectedListener(this);
 
         ImageViewMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,10 +130,47 @@ public class MainActivity extends AppCompatActivity implements
             }
         });
 
+        SetMenuClick();
+
     }//_____________________________________________________________________________________________ End onCreate
 
 
+    private void SetMenuClick() {//_________________________________________________________________ Start SetMenuClick
+
+        LinearLayoutMenuHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.home);
+            }
+        });
+
+        LinearLayoutMenuLegal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.legalBill);
+            }
+        });
+
+        LinearLayoutMenuTraffic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.trafficController);
+            }
+        });
+
+        LinearLayoutLeave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.leaveRequest);
+            }
+        });
+
+
+    }//_____________________________________________________________________________________________ End SetMenuClick
+
+
     private void SetListener() {//__________________________________________________________________ Start onCreate
+
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(
@@ -158,8 +208,6 @@ public class MainActivity extends AppCompatActivity implements
             Version = "0.0";
         }
         StringBuilder sp = new StringBuilder();
-        sp.append(getResources().getString(R.string.Application));
-        sp.append(" ");
         sp.append(getResources().getString(R.string.app_name));
         sp.append(" ");
         sp.append(getResources().getString(R.string.Version));
@@ -204,6 +252,7 @@ public class MainActivity extends AppCompatActivity implements
             case R.id.leaveRequest:
                 navController.navigate(R.id.leaveRequest);
                 break;
+
 
         }
         return true;
