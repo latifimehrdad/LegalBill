@@ -43,6 +43,9 @@ public class Home extends Fragment {
     @BindView(R.id.LinearLayoutLeaveRequest)
     LinearLayout LinearLayoutLeaveRequest;
 
+    @BindView(R.id.LinearLayoutContract)
+    LinearLayout LinearLayoutContract;
+
     public Home() {//_______________________________________________________________________________ Start Home
     }//_____________________________________________________________________________________________ End Home
 
@@ -112,6 +115,13 @@ public class Home extends Fragment {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_home_to_leaveRequest);
+            }
+        });
+
+        LinearLayoutContract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_home_to_contract);
             }
         });
 

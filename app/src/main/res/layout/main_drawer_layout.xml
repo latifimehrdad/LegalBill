@@ -28,6 +28,27 @@
                 android:padding="@dimen/_5sdp"
                 />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="نام و نام خانوادگی"
+                android:gravity="center"
+                android:background="@color/ML_LoginBack"
+                android:textColor="@color/ML_White"
+                android:padding="@dimen/_3sdp"
+                android:textSize="@dimen/_8sdp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="سمت : مدیریت"
+                android:gravity="center"
+                android:background="@color/ML_LoginBack"
+                android:textColor="@color/ML_White"
+                android:padding="@dimen/_3sdp"
+                android:textSize="@dimen/_8sdp"/>
+
+
 <!--            <com.google.android.material.navigation.NavigationView-->
 <!--                android:id="@+id/nvView"-->
 <!--                android:layout_width="match_parent"-->

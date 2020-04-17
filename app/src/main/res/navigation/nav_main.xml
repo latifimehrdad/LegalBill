@@ -69,6 +69,15 @@
             app:popExitAnim="@anim/slide_out_left"
             />
 
+        <action
+            android:id="@+id/action_home_to_contract"
+            app:destination="@id/contract"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            />
+
     </fragment>
 
     <fragment
@@ -90,5 +99,12 @@
         android:name="ir.negra.legalbill.views.fragments.LeaveRequest"
         android:label="LeaveRequest"
         tools:layout="@layout/fragment_leave_request"/>
+
+    <fragment
+        android:id="@+id/contract"
+        android:name="ir.negra.legalbill.views.fragments.Contract"
+        android:label="Contract"
+        tools:layout="@layout/fragment_contract"
+        />
 
 </navigation>
